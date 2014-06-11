@@ -12,7 +12,7 @@ NOTICE BEFORE YOU USE
 TODO
 ====
 
-None
+* manage root cert bundle
 
 Instructions
 ============
