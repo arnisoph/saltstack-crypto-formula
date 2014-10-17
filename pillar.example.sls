@@ -13,7 +13,7 @@ crypto:
           ...
           -----END RSA PRIVATE KEY-----
       sunstone_ca:
-        path: /etc/ssl/certs/cunstone-ca.pem
+        path: /etc/ssl/certs/sunstone-ca.pem
         content: |
           -----BEGIN CERTIFICATE-----
           ...
