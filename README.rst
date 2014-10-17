@@ -2,6 +2,9 @@
 crypto-formula
 ==============
 
+.. image:: https://api.flattr.com/button/flattr-badge-large.png
+    :target: https://flattr.com/submit/auto?user_id=bechtoldt&url=https%3A%2F%2Fgithub.com%2Fbechtoldt%2Fsaltstack-crypto-formula
+
 Salt Stack Formula to set up and configure systems to provide secure communication using cryptography
 
 NOTICE BEFORE YOU USE
@@ -12,7 +15,8 @@ NOTICE BEFORE YOU USE
 TODO
 ====
 
-* manage root cert bundle
+* manage root CA cert bundle
+* import GPG keys to keychain
 
 Instructions
 ============
@@ -29,9 +33,13 @@ Available states
 .. contents::
     :local:
 
+``crypto.gpg``
+--------------
+Manage GPG keys
+
 ``crypto.x509``
 ---------------
-States proving X.509 management
+Manage X.509 keys/ certificates
 
 Additional resources
 ====================
@@ -58,7 +66,8 @@ Salt Compatibility
 
 Tested with:
 
-* 2014.1.3
+* 2014.1
+* 2017.7
 
 OS Compatibility
 ================

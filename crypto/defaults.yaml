@@ -1,3 +1,5 @@
 {% load_yaml as rawmap %}
 Debian: {}
+RedHat: {}
+FreeBSD: {}
 {% endload %}
