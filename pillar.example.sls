@@ -48,3 +48,17 @@ crypto:
           ...
           ...
           -----END PGP PRIVATE KEY BLOCK-----
+
+      duply_keypair:
+        batch: |
+            %echo GEN START
+            Key-Type: RSA
+            Key-Length: 4096
+            Subkey-Type: RSA
+            Subkey-Length: 4096
+            Name-Real: duply_keypair
+            Name-Email: hostmaster@domain.de
+            Expire-Date: 0
+            Passphrase: RictE5NUZEV_h4OixZEkqF63CNjxq942
+            %commit
+            %echo GEN DONE

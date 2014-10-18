@@ -16,7 +16,6 @@ TODO
 ====
 
 * manage root CA cert bundle
-* import GPG keys to keychain
 
 Instructions
 ============
@@ -67,7 +66,7 @@ Salt Compatibility
 Tested with:
 
 * 2014.1
-* 2017.7
+* 2017.7 (required for ``crypto.gpg``)
 
 OS Compatibility
 ================
