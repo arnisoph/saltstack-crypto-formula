@@ -16,6 +16,7 @@ TODO
 ====
 
 * manage root CA cert bundle
+* use salt.modules.gpg
 
 Instructions
 ============
