@@ -26,7 +26,7 @@ crypto_gpg_{{ k }}_key:
     - contents_pillar: crypto:gpg:keys:{{ k }}:content
   {% else %}
     {% set batch_file_path = v.batch_file_path|default('/root/gpg_batch_' ~  salt['hashutil.sha256_digest'](k) ~ '.txt') %}
-    {% if salt['cmd.retcode']('gpg --list-keys \'' ~  k ~ '\'') == 0 %}
+    {% if salt['cmd.retcode']('gpg --homedir=' ~ v.gpg_homedir|default('/root/.gnupg') ~ ' --list-keys \'' ~  k ~ '\'', cwd=v.cmd_cwd|default('/root')) == 0 %}
       {% set key_exists = True %}
     {% else %}
       {% set key_exists = False %}
@@ -48,9 +48,9 @@ crypto_gpg_{{ k }}_batchfile:
 crypto_gpg_{{ k }}_genkey:
   cmd:
     - run
-    - name: gpg -v --gen-key --batch '{{ batch_file_path }}' && rm -f '{{ batch_file_path }}'
-    - runas: root
-    - cwd: /root/
+    - name: gpg -v --homedir={{ v.gpg_homedir|default('/root/.gnupg') }} --gen-key --batch '{{ batch_file_path }}' && rm -f '{{ batch_file_path }}'
+    - runas: {{ v.cmd_user|default('root') }}
+    - cwd: {{ v.cmd_cwd|default('/root') }}
     {% if key_exists %}
     - unless: /bin/true
     {% else %}
