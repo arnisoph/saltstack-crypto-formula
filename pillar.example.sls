@@ -62,3 +62,14 @@ crypto:
             Passphrase: RictE5NUZEV_h4OixZEkqF63CNjxq942
             %commit
             %echo GEN DONE
+  dh:
+    params:
+      postfix_dh_param_512:
+        numbits: 512
+        path: /etc/postfix/dh_512.pem
+      postfix_dh_param_1024:
+        numbits: 1024
+        path: /etc/postfix/dh_1024.pem
+      postfix_dh_param_2048:
+        numbits: 2048
+        path: /etc/postfix/dh_2048.pem

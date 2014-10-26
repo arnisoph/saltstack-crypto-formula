@@ -33,6 +33,15 @@ Available states
 .. contents::
     :local:
 
+``crypto``
+----------
+Include all other public state files (SLS)
+
+``crypto.dh``
+-------------
+Manage DH parameter files
+Be patient here. Generation of these files can take a long time.
+
 ``crypto.gpg``
 --------------
 Manage GPG keys
