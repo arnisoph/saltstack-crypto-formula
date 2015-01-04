@@ -6,7 +6,7 @@ crypto:
         type: private
         mode: 640
         group: oneadmin
-        content: |
+        contents: |
           -----BEGIN RSA PRIVATE KEY-----
           ...
           ...
@@ -14,15 +14,20 @@ crypto:
           -----END RSA PRIVATE KEY-----
       sunstone_ca:
         path: /etc/ssl/certs/sunstone-ca.pem
-        content: |
+        contents: |
           -----BEGIN CERTIFICATE-----
           ...
           ...
           ...
           -----END CERTIFICATE-----
+      sunstone_cert_merged:
+        path: /etc/ssl/certs/sunstone-ca.pem
+        contents_pillar_list:
+          - 'tls_internal:keys:32_62_C5_12_01_crt:content'
+          - 'tls_internal:keys:32_62_C5_12_01_ca:content'
       sunstone_cert:
         path: /etc/ssl/certs/sunstone.pem
-        content: |
+        contents: |
           -----BEGIN CERTIFICATE-----
           ...
           ...
@@ -32,7 +37,7 @@ crypto:
     keys:
       duply_pub_key:
         path: /root/.duply/myprof_example2/gpgkey.F1D35B33.pub.asc
-        content: |
+        contents: |
           -----BEGIN PGP PUBLIC KEY BLOCK-----
           ...
           ...
@@ -42,7 +47,7 @@ crypto:
         path: /root/.duply/myprof_example2/gpgkey.F1D35B33.sec.asc
         type: private
         mode: 640
-        content: |
+        contents: |
           -----BEGIN PGP PRIVATE KEY BLOCK-----
           ...
           ...

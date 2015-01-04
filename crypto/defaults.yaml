@@ -1,5 +1,8 @@
 {% load_yaml as rawmap %}
-Debian: {}
+Debian:
+  x509:
+    cert_pub_dir: /etc/ssl/certs
+    cert_priv_dir: /etc/ssl/private
 RedHat: {}
 FreeBSD: {}
 {% endload %}
