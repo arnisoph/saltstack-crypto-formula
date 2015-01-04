@@ -21,7 +21,7 @@ crypto:
           ...
           -----END CERTIFICATE-----
       sunstone_cert_merged:
-        path: /etc/ssl/certs/sunstone-ca.pem
+        path: /etc/ssl/certs/sunstone-crt_merged.pem
         contents_pillar_list:
           - 'tls_internal:keys:32_62_C5_12_01_crt:content'
           - 'tls_internal:keys:32_62_C5_12_01_ca:content'
