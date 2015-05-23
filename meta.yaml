@@ -1,0 +1,10 @@
+name: saltstack-crypto-formula
+source: https://github.com/bechtoldt/saltstack-crypto-formula
+summary: SaltStack Formula to set up and configure systems to provide secure communication using cryptography
+todo:
+  - add instructions how to use formhelper, add information about it in the formula-docs (dependency), show up alternative?
+  - 'table/ matrix: os/salt compatibility (dedicated file)'
+  - add list of available states
+  - add tests
+  - manage root CA cert bundle
+  - use salt.modules.gpg
